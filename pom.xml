@@ -28,8 +28,8 @@
 				<configuration>
 				<deploymentType>standalone</deploymentType>
  <muleVersion>4.2.0</muleVersion> 
- <muleHome>${mule.home}</muleHome> 
- <applicationName>${artifactId}</applicationName> 
+ <muleHome>C:\Users\tumma\AnypointStudio\studio-workspace\poc-on-jenkins2</muleHome> 
+ <applicationName>poc-on-jenkins2</applicationName> 
  <community>${mule.runtime.community}</community>
 				</configuration>
 			</plugin>
