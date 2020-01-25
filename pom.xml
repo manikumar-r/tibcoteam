@@ -16,22 +16,31 @@
 		<app.runtime>4.2.0</app.runtime>
 		<mule.maven.plugin.version>3.2.7</mule.maven.plugin.version>
 	</properties>
-   
-	<build>
 	
+	
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
+				
 				<configuration>
-				<deploymentType>standalone</deploymentType>
- <muleVersion>4.2.0</muleVersion> 
- <muleHome>C:\Users\tumma\AnypointStudio\studio-workspace\poc-on-jenkins2</muleHome> 
- <applicationName>poc-on-jenkins2</applicationName> 
- <community>${mule.runtime.community}</community>
+					<deploymentType>arm</deploymentType>
+					<username>mani21</username> 
+					<password>Maninene@21</password>
+					<target>local</target>
+					<targetType>server</targetType>
+					<environment>Sandbox</environment>
 				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
@@ -76,5 +85,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
-</project>
+ </project>
