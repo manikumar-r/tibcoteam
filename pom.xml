@@ -33,7 +33,7 @@
       <username>mani@21</username>
       <password>Maninene@21</password>
      <environment>Sandbox</environment>
-     <applicationName>poc-on-jenkins2</applicationName>
+     
       <properties>
         <key>cicdonpremi</key>
       </properties>
