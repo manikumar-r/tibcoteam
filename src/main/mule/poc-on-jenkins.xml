@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="05946e35-8b9d-4c81-aaa2-35fc95c11c59" >
+		<http:listener-connection host="localhost" port="8089" />
+	</http:listener-config>
+	<flow name="poc-on-jenkinsFlow" doc:id="ee9ceea6-0bb3-453b-ae96-c45c7c9c44c2" >
+		<http:listener doc:name="Listener" doc:id="de223aeb-acf5-465e-9471-3eefedad8b97" config-ref="HTTP_Listener_config" path="/api"/>
+		<set-payload value="Hello Tibco Team.........." doc:name="Set Payload" doc:id="c7909417-81e0-4852-b258-5cdb18d42788" />
+	</flow>
+</mule>
