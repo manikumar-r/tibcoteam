@@ -4,15 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>poc-on-jenkins</artifactId>
+	<artifactId>poc-on-jenkins2</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
-
-
-
-
-
-	<name>poc-on-jenkins</name>
+	<name>poc-on-jenkins2</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,7 +16,7 @@
 		<app.runtime>4.2.0</app.runtime>
 		<mule.maven.plugin.version>3.2.7</mule.maven.plugin.version>
 	</properties>
-
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -30,15 +25,19 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				<cloudHubDeployment>
-				<username>mani21</username>
-				<password>Maninene@21</password>
-				<muleVersion>4.2.0</muleVersion>
-				<environment>Sandbox</environment>
-				<workers>1</workers>
-				<workerType>Micro</workerType>
-				<applicationName>poc-on-jenkins</applicationName>
-				</cloudHubDeployment>
+				<armDeployment>
+      <muleVersion>4.2.2</muleVersion>
+      <uri>https://anypoint.mulesoft.com</uri>
+       <target>onpremesis</target>
+      <targetType>server</targetType>
+      <username>mani@21</username>
+      <password>Maninene@21</password>
+     <environment>Sandbox</environment>
+     <applicationName>poc-on-jenkins2</applicationName>
+      <properties>
+        <key>cicdonpremi</key>
+      </properties>
+    </armDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -84,5 +83,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
-</project>
+ </project>
